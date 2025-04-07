@@ -38,7 +38,7 @@ def validate_user(user: Optional[User]):
     if not user:
         return False
     ids = users.split(",")
-    return user.id in ids
+    return str(user.id) in ids
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print("Receive message...")
